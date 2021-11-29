@@ -10,3 +10,6 @@ Please try and complete the following before next class:
 
 ## Bonus
 Encrypt the bucket 
+
+## Extra Bonus point
+Use a backend to manage the state file (we will cover this in class)
