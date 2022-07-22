@@ -1,0 +1,131 @@
+Questions 
+
+No of PODs needs to be reviewed and scaled up, if required
+Min connection should be 0 for one data functions since it will auto scale up POD's
+Rate limit should be set based on the traffic volume for one data functions
+What is the acceptable time taken to load (render) the full screen ?
+Review DB configurations (Make sure Max connection to DB does not exceed the POD total)
+Review MQ and Solace configurations 
+"Review static content managememt. (Applicable only for web applications). Recommended to use GEM static content loading."
+All records must be encrypted in transit over a network.
+EDPP Recommendation Implementation for PII
+
+What is the SLI for the requests
+What is the time data frequency/refresh rate for reporting. 
+Total number of internet/intranet users that will use the system
+What is count of internet/intranet concurrent users at a peak hours in each market (expected TPS)?
+What is the growth rate for users per year?
+What all business portfolios are intending to use  (current and in future)
+POD CPU and Memory needs to be configured and reviewed based on the application usage
+Load balancing algorithm should be in Round Robin (RR) at router level
+Livenes and Readiness probe configuration
+Creating separate SVC IDs for each environment 
+What are documentation available for end users. 
+
+
+
+
+Do we have any archiving requirements for articles per market and if yes how long?
+What are the auditing requirements per market? (versioning including who modified and when) ??? Sobha
+How long do we need to keep audit details. ??? Sobha
+What are the hours of operation for each market
+How does User Access the system (web, mobile and any other channel)?
+What are the different user roles? (if Applicable)
+Are there any specific system requirements to use the system (installing components, browser requirements etc.)
+
+
+What is the data classification?
+Baya Threat Modeling
+
+In case of impact/outages, how long the system can be unavailable before back up again?
+System data backed up every x hours and copies stored in a secure off-site location?
+In the event of disaster what are the responsibilities of different stakeholders? 
+Design to support an active-active, GDHA (Geographically Dispersed High Availability) topology. The traffic should be distributed between IPC1, IPC2(R1) and IPC2(R2).
+Cognizant of network topologies and optimize traffic routing accordingly.
+All APIs should follow RESTful  design principles.
+Implement RTF where needed
+Adhere with Amex DLS
+What is the error messages standards (how do we communicate the end users about the error)
+Support mechanism based on error messages?  
+
+How long the system can be inactive before a timeouts?
+How long the system should wait before timeout (e.g. 20 seconds)
+Network constraints (if any) ???? is it needed????
+Regression tests to ensure changes can be tested rapidly and with confidence.  
+Adhered to onboard to Heartbeat
+Setup iGCSNFRa alerts ( DT1 )
+Setup application alerts ( DT1/Splunk ) and configure threshold and INC alerts
+Baselining the page response time and availability using tools such as DT Synthetic and RUM(Real User Monitoring)
+Engaging ECC team for new applications onboarding
+Proper logging should be available with Request/Response/Error/Alert codes
+Adding new one data functions to Splunk dashboard
+Certificate renewal process ( including expiration alerts )
+ACL requests needs to be submitted and connectivity needs to be validated 
+Ensure to use GTM WIP's for downstream system interactions (API, SOAP , DB etc)
+Unprotected health check URL's
+Update Runbook ( IGCSNFRa, Architecture, dependent support groups info )
+Define Standard Operational Procedures for common issues
+Sign off from all consumer applications (Applicable for web service provider application) 
+Communicate  finalized plan  to all the stakeholders (Internal & External teams)
+Enabling Multi AZ
+New application VIPs should be added for GDHA failover in AppViewX Self Service Tool
+Graceful degradation to be incorporate for auto retry 
+Identifying peak and non peak hours
+Blue and Green deploymnet
+PIV automation
+Paging should be configured for all the applications
+Chaos Testing - DART
+Correlation IDs generated at receipt of request, passed on to all subsystems and API calls, and included in all logs
+
+
+
+
+
+
+
+Questions
+What is the acceptable time taken to load (render) the full screen (with all images and buttons) of the application after clicking the icon, link or button?
+What is the acceptable time the UI can take to respond to action performed by user, e.g. click button to go to next screen?
+What is the total number of system users(intranet/internet)
+What are the hours of operation for the system?
+Within how much time (milliseconds) a REST service call must respond?
+Within how much time (minutes) a batch process must complete its processing?
+How many concurrent users the system should support?
+How many requests a REST service must support per second?
+How much data can we store? Will we ever run out of storage space?
+Which browsers, operating systems and versions should we expect the software to work on?
+How often can we expect the system to be available to use? 
+How does it handle critical failures? 
+How long does it take for a system to come back online after a failure?
+"How to keep application running after an error occurs? What SLA needs to be met on Availability? "
+How much Data can the system store and for how long?
+Correlation IDs generated at receipt of request, passed on to all subsystems and API calls, and included in all logs
+Centralising logs, with all services and instances logging to a single central location
+Only logging useful information and fixing errors as they are identified
+Implementing third-party monitoring services for crucial areas of the application
+
+Kubernetes(K8s) Pod CPU and Memory configuration based on application usage
+Blue green deploymnet
+What SLAs need to be meet for Availaibility, ResponseTime.. etc
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
